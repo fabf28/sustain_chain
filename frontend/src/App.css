@@ -18,28 +18,38 @@ html, body{
 }
 
 .bg{
+  background: #000;
+  width: 100vw;
+  left: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  font-family: "monty", serif;
+  color: white;
+}
+
+.hero-bg {
   background-image: url('C:\Users\salma\New folder\sustain_chain\frontend\src\assets\homepg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100vh;
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding:0;
-  overflow-y:auto;
-  justify-content: flex-start;
   box-sizing: border-box;
-  font-family: url('C:\Users\salma\New folder\sustain_chain\frontend\src\assets\montserrat\Montserrat-Black.ttf');
-  color: white;
-  background-attachment: fixed;
-  margin:0;
 }
 
 .homePagePara{
-  font-family: url('montserrat/Montserrat-Black.ttf');
+  font-family: "monty", serif;
   color: white;
   width: 25%;
   align-content: center;
