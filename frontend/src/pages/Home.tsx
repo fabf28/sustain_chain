@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import Papa, { ParseResult } from 'papaparse';
+import Papa, { type ParseResult } from 'papaparse';
 
 
 interface CSVRow {
