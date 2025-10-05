@@ -1,30 +1,35 @@
+@font-face {
+  font-family: "monty-light";
+  src: url('./assets/montserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
 }
 
-html, body, #root { height: 100%; }
-body { margin: 0; background: #000; color: #fff;
-  font-family: "monty", serif; }
-  
-@font-face {
-  font-family: "monty";
-  src: url('./assets/montserrat/Montserrat-Black.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+.html, body {
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
-  
-/* button */
-  .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:999px;
-  border:none; background:linear-gradient(90deg,#025401,#14ff00); color:white; font-weight:800; text-decoration:none; font-family: monty;}
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: "monty", serif;
+  overflow-y: auto;
+}
 .container { max-width: 100%; margin: 0 auto; padding: 0 24px; }
 
 
 @font-face {
-  font-family: "thinMonty";
-  src: url('./assets/montserrat/Montserrat-Light.ttf') format('truetype');
-  font-weight: normal;
+  font-family: "monty";
+  src: url('./assets/montserrat/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
 }
 
