@@ -1,0 +1,19 @@
+{
+    "modeOfTransport": {
+        "modeDistribution": "bar charts",
+        "mostEmmission": "llm sentence",
+        "increaseEfficiency": "llm sentence"
+    },
+    "deliveryTime": {
+        "deliveryTime_vs_mode": "box_plots",
+        "deliveryTime_vs_carrier": "box_plot",
+        "deliveryTime_average": "llm sendtence with stat input"
+    },
+    "processingTime": {
+        "processingTime_vs_supplierName": "box_plots",
+        "processingTime_vs_supplierType": "box_plots",
+        "processingTime_vs_deliveryTime": "pie_chart",
+        "processingTime_average": "llm sentence with stat input",
+        "why_pt_and_dt": "general llm print sentence"
+    }
+}
