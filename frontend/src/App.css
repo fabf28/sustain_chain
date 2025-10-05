@@ -1,57 +1,64 @@
+
+hr {
+  display: block;
+  height: 4px;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  width: 60%;
+  margin: 32px auto 0 auto;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
 }
 
-#root {
-  padding: 0;
-  margin: 0 auto;
-  height: 100%;
-  text-align: center;
-}
 
-html, body{
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
 
-.bg{
+
+
+.bg {
   background: #000;
   width: 100vw;
-  left: 0;
-  position: relative;
-  display: flex;
-  flex-direction: column; 
-  align-items: stretch;
-  padding: 0;
+  min-height: 100vh;
+  font-family: "monty", serif;
+  color: white;
   margin: 0;
+  padding: 0;
   overflow-y: auto;
+  height: 100vh;
+}
+
+.hero-bg {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
   box-sizing: border-box;
   font-family: "monty", serif;
   color: white;
-}
-
-.hero-bg {
-  background-image: url('C:\Users\salma\New folder\sustain_chain\frontend\src\assets\homepg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100vw;
+  background: url('./assets/homepg.png') center top / cover no-repeat;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  width: 100vw;
+  padding-top: 120px;
+  margin-top: 0;
+  border-radius: 0 0 40px 40px;
+  border-bottom: 4px solid #fff;
+  position: relative;
 }
 
 .homePagePara{
-  font-family: "thinMonty", serif;
+  font-family: "monty-light", "monty", serif;
+  font-weight: 300;
   color: white;
-  width: 25%;
+  width: 45ch;
   align-content: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 22vw;
+  line-height: 1.6;
+  text-align: left;
 }
 
