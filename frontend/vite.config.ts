@@ -4,6 +4,8 @@ import path from 'node:path'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/', 
+  publicDir: 'public', 
   resolve: {
     alias: {
       react: path.resolve(__dirname, 'node_modules/react'),
