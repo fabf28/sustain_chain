@@ -22,8 +22,8 @@ body { margin: 0; background: #000; color: #fff;
 
 
 @font-face {
-  font-family: "monty";
-  src: url('./assets/montserrat/Montserrat-Black.ttf') format('truetype');
+  font-family: "thinMonty";
+  src: url('./assets/montserrat/Montserrat-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
