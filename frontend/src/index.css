@@ -6,8 +6,16 @@
 
 html, body, #root { height: 100%; }
 body { margin: 0; background: #000; color: #fff;
-  font-family: url('.\assets\montserrat\Montserrat-ExtraBold.ttf') }
+  font-family: "monty", serif; }
 .container { max-width: 100%; margin: 0 auto; padding: 0 24px; }
+
+
+@font-face {
+  font-family: "monty";
+  src: url('C:\Users\salma\New folder\sustain_chain\frontend\src\assets\montserrat\Montserrat-Black.ttf') format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* button */
 .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:999px;
