@@ -9,7 +9,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className="container" style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
         <Link to="/" className={styles.brand}>
-          SustainChain <span className={styles.sub}>Efficiency.</span>
+          SustainChain.<span className={styles.sub}></span>
         </Link>
 
         <nav aria-label="Primary" className={styles.nav}>
@@ -22,10 +22,10 @@ export default function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/insights"
+            to="/aboutus"
             className={({ isActive }: NavState) => (isActive ? styles.active : styles.link)}
           >
-            Insights &amp; Analysis
+            About Us
           </NavLink>
 
           <NavLink
