@@ -24,8 +24,8 @@ export default function Insights() {
           <img src={`${IMG_BASE}/delivery_time_vs_mode.png`} alt="Delivery Time by Mode" />
         </div>
         <div className="analytics-card text-card">
-          <h2>Ai Overview</h2>
-          <p>ai here</p>
+          <h2>Overview</h2>
+          <p>Use air freight only when truly urgent. Plan ship dates earlier so sea or rail works, and consolidate orders to fill containers fully. Standardize categories and pack sizes so you fit more product in each load and cut the number of trips. Prefer recyclable, lower-impact materials and require supplier take-back where possible. Track delay days, spend, and estimated CO₂ by supplier, mode, and item to find waste. Tie prices and payment terms to on-time delivery and emissions per unit to force results.</p>
         </div>
       </section>
 
