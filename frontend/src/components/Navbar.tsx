@@ -9,7 +9,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className="container" style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
         <Link to="/" className={styles.brand}>
-          SustainChain <span className={styles.sub}>.</span>
+          SustainChain.<span className={styles.sub}></span>
         </Link>
 
         <nav aria-label="Primary" className={styles.nav}>

@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+}
+
 #root {
   padding: 0;
   margin: 0 auto;
@@ -28,6 +34,8 @@ html, body{
   box-sizing: border-box;
   font-family: url('C:\Users\salma\New folder\sustain_chain\frontend\src\assets\montserrat\Montserrat-Black.ttf');
   color: white;
+  background-attachment: fixed;
+  margin:0;
 }
 
 .homePagePara{
