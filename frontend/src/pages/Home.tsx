@@ -1,14 +1,41 @@
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 // CSVUploader: only file input and upload button, no parsing or backend call
 
 
 const CSVUploader = () => {
   const [file, setFile] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
       setFile(event.target.files[0]);
+      setError(null);
+    }
+  };
+
+  const handleUpload = async () => {
+    if (!file) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      const response = await fetch('http://localhost:8000/insights/', {
+        method: 'POST',
+        body: formData,
+      });
+      if (!response.ok) throw new Error('Upload failed');
+      const data = await response.json();
+      navigate('/Insights', { state: { insights: data } });
+    } catch (err: any) {
+      setError('Upload failed. Please try again.');
+      console.error('Error:', err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -24,9 +51,15 @@ const CSVUploader = () => {
           style={{ display: 'none' }}
         />
       </label>
-      <button disabled={!file} className="btn" style={{ marginBottom: 50, fontFamily: "monty", fontSize: '1rem', background: 'linear-gradient(90deg,#025401,#14ff00)', color: 'white', border: 'none', borderRadius: 999, padding: '12px 22px', marginLeft: 8, marginTop: 50 }}>
-        Analyse
+      <button
+        disabled={!file || loading}
+        onClick={handleUpload}
+        className="btn"
+        style={{ marginBottom: 50, fontFamily: "monty", fontSize: '1rem', background: 'linear-gradient(90deg,#025401,#14ff00)', color: 'white', border: 'none', borderRadius: 999, padding: '12px 22px', marginLeft: 8, marginTop: 50 }}
+      >
+        {loading ? 'Analyzing...' : 'Analyse'}
       </button>
+      {error && <div style={{ color: 'red', marginTop: 8 }}>{error}</div>}
     </div>
   );
 };
