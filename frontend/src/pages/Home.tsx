@@ -10,7 +10,10 @@ export default function Home() {
         Optimizing those systems with sustainability and efficient practices in mind ensures a future on this earth.
       </p>
       <div style={{ marginTop: 24 }}>
-        <Link to="/insights" className="btn">View Insights</Link>
+        <Link to="/Insights" className="btn">View Insights</Link>
+      </div>
+      <div>
+        <h1>Streamline Your Operations</h1>
       </div>
     </section>
   )

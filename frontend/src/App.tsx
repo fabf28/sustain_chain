@@ -1,10 +1,11 @@
 import { Routes, Route, Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar.tsx'
 import Home from './pages/Home.tsx'
-import Insights from './pages/Insights.tsx'
+import AboutUs from './pages/AboutUs.tsx'
 import Contact from './pages/Contact.tsx'
 import NotFound from './pages/NotFound.tsx'
 import './App.css'
+import Insights from './pages/Insights.tsx'
 
 function Layout() {
   return (
@@ -22,7 +23,8 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="insights" element={<Insights />} />
+        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="Insights" element={<Insights />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Route>
