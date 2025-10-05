@@ -24,7 +24,7 @@ const CSVUploader = () => {
           style={{ display: 'none' }}
         />
       </label>
-      <button disabled={!file} className="btn" style={{ marginBottom: 400, fontFamily: "monty", fontSize: '1rem', background: 'linear-gradient(90deg,#025401,#14ff00)', color: 'white', border: 'none', borderRadius: 999, padding: '12px 22px', marginLeft: 8, marginTop: 150 }}>
+      <button disabled={!file} className="btn" style={{ marginBottom: 50, fontFamily: "monty", fontSize: '1rem', background: 'linear-gradient(90deg,#025401,#14ff00)', color: 'white', border: 'none', borderRadius: 999, padding: '12px 22px', marginLeft: 8, marginTop: 50 }}>
         Analyse
       </button>
     </div>
@@ -78,11 +78,11 @@ export default function Home() {
           zIndex: 0,
         }} />
         <h1 style={{ position: 'relative', zIndex: 1, color: '#fff', fontWeight: 800, fontSize: '2rem', marginBottom: 32 }}>Streamline Your Operations</h1>
-  <div style={{ position: 'relative', zIndex: 1, marginBottom: 24, color: '#fff', fontSize: '1.1rem', fontWeight: 400, letterSpacing: 0.1, lineHeight: 1.5 }}>
-          Upload your CSV file below to get started with analysis. 
-          Please make sure it follows the format in this example.
+  <div style={{ position: 'relative', zIndex: 1, marginBottom: 8, color: '#fff', fontSize: '1.1rem', fontWeight: 400, letterSpacing: 0.1, lineHeight: 1.5, fontFamily: 'monty-light, monty, serif' }}>
+          Upload your CSV file below to get started with analysis.<br/>
+          Please make sure it follows the format in <a href="https://docs.google.com/spreadsheets/d/154o2DtI_UaIOucdpa5cUBMcoTwkxsLutqLzByIFo1nI/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ color: '#14ff00', textDecoration: 'underline' }}>this example</a>.
         </div>
-        <div style={{ position: 'relative', zIndex: 1, paddingTop: 16, paddingBottom: 8 }}>
+  <div style={{ position: 'relative', zIndex: 1, paddingTop: 2, paddingBottom: 8 }}>
           <CSVUploader />
         </div>
         {/* Decorative element: bottom left accent */}
