@@ -22,10 +22,10 @@ export default function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/insights"
+            to="/aboutus"
             className={({ isActive }: NavState) => (isActive ? styles.active : styles.link)}
           >
-            Insights &amp; Analysis
+            About Us
           </NavLink>
 
           <NavLink
