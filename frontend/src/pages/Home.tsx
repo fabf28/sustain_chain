@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 export default function Home() {
+  
   return (
     <section style={{ padding: '40px 0 80px' }}>
       <h1>Optimize Your Supply Chain</h1>
