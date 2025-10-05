@@ -16,13 +16,26 @@ def embed_image(filename):
     return img_b64
 
 class DataF:
-    def _init_(self):
-        self.df = pd.read_csv('ml/data/scm.csv')
+    def __init__(self, path):
+        self.df = pd.read_csv(path)
 
     #format dataset
     def create_time_diff(self, param1, param2, diff):
         self.df[diff] = (pd.to_datetime(self.df[param1]) - pd.to_datetime(self.df[param2])).dt.days
         print(self.df)
+    
+    #create late and not late
+    def late_delivery_analysis(self, param1, param2, label1, label2):
+        total = self.df[param1]
+        late = len([x for x in self.df[param1] if x > 0])
+        percent1 = round(late/total * 100, 2)
+
+        total2 = self.df[param2]
+        late2 = len([x for x in self.df[param1] if x > 0])
+        percent2 = round(late2/total2 * 100, 2)
+        
+        text = f"{percent1}% of {label1} made delivery's late while {percent2}% of {label2} made delivery's late."
+        return text
 
     #create scatter plot
     def create_scatter_plot(self, param1, param2, xlabel, ylabel, title, filename):
@@ -31,7 +44,7 @@ class DataF:
         plt.xlabel(xlabel)
         plt.ylabel(ylabel)
         plt.savefig(f"ml/imgs/{filename}.png")
-        plt.show()
+        #plt.show()
 
         return embed_image(filename)
 
@@ -45,9 +58,10 @@ class DataF:
         plt.xlabel(xlabel)
         plt.ylabel(ylabel)
         plt.savefig(f"ml/imgs/{filename}.png")
-        plt.show()
+        #plt.show()
 
         return embed_image(filename)
+
 
     #create box plots
     def create_box_plots(self, param1, param2, xlabel, ylabel, filename):
@@ -56,17 +70,22 @@ class DataF:
         plt.xlabel(xlabel)
         plt.ylabel(ylabel)
         plt.savefig(f"ml/imgs/{filename}.png")
-        plt.show()
+        #plt.show()
 
         return embed_image(filename)
+
+    
+
+    def avg_times(self, param):
+        avg = sum(self.df[param]) / len(self.df[param])
+        return avg
+    
+    
+
 
     #create_time_diff("ActualShipDate", "CreationDate","ProcessingTime")
     #create_box_plots("ModeOfTransportCode", "Quantity", "Mode of Transport", "Quantity", "boxes")
 
     #create pie chart
-
-
-    create_bar_chart("ModeOfTransportCode", "Modes", "Numbers", "bar", "All the Modes of Transport", "Transport")
-
 
     #analyze graph with openai
