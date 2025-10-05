@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './Home.css' // optional; or keep styles in App.css
+ // optional; or keep styles in App.css
 
 export default function Home() {
   return (
