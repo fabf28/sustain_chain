@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
  // optional; or keep styles in App.css
 
 export default function Home() {
+  
   return (
     <div className="bg">
       <h1>Optimize Your Supply Chain</h1>

@@ -1,31 +1,15 @@
-import { Routes, Route, Outlet } from 'react-router-dom'
-import Navbar from './components/Navbar.tsx'
-import Home from './pages/Home'
-import Insights from './pages/Insights'
-import Contact from './pages/Contact'
-import NotFound from './pages/NotFound'
+import './App.css'
 
-function Layout() {
+function App() {
   return (
-    <>
-      <Navbar />
-      <main className="container">
-        <Outlet />
-      </main>
-    </>
-  )
-}
+      <div className="bg">
+      <h1>Optimize Your Supply Chain</h1>
+        <p className="homePagePara">
+          Supply chains run our lives. From every product on the shelf, to the food we eat, the car we drive, the bus we take. Optimizing those systems with sustainability and efficient practices in mind ensures a future on this earth.
+        </p>
+      </div>
+      )
+      }
 
-export default function App() {
-  return (
-    <Routes>
-      <Route element={<Layout />}>
-        {/* REAL HOMEPAGE */}
-        <Route index element={<Home />} />
-        <Route path="insights" element={<Insights />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
-  )
-}
+      
+export default App
